@@ -25,8 +25,8 @@ class Douban():
         self.driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/ul[1]/li[2]').click() #class_name不好用
         time.sleep(10)
 
-        username = '13934392919' #输入为字符串
-        password = 'fsr991212'
+        username = '' #输入为字符串
+        password = ''
 
         self.driver.find_element(By.XPATH, '//*[@id="username"]').send_keys(username)
         self.driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(password)
@@ -52,7 +52,7 @@ class Douban():
 
     def get_looked_movies(self):
         # driver = self.webdriver.Chrome(executable_path=r"F:\google\chromedriver.exe")
-        cookie_info = 'douban-fav-remind=1; gr_user_id=bfbf6b0d-b0c0-4653-88d4-f2bd7cb31b5d; ll="118107"; bid=uqxq8W9k26w; push_doumail_num=0; __utmv=30149280.14192; push_noty_num=0; _pk_ref.100001.8cb4=["","",1663578352,"https://www.google.com/"]; _pk_ses.100001.8cb4=*; ap_v=0,6.0; __utma=30149280.280507868.1583798340.1663319925.1663578353.16; __utmc=30149280; __utmz=30149280.1663578353.16.8.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not provided); ct=y; __utmt=1; _pk_id.100001.8cb4=d33d4b7b45923444.1662625569.10.1663581535.1663320605.; __utmb=30149280.30.10.1663578353; dbcl2="141920748:taE/ULJRGBk"'
+        cookie_info = ''
         cookie_list = [info.strip().split('=') for info in cookie_info.split(';')]
         cookies = {data[0]: data[1].replace('"', '') for data in cookie_list}
         print(cookies)
